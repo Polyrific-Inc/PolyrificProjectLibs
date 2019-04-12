@@ -1,8 +1,12 @@
 pool:
   vmImage: 'vs2017-win2016'
 
+name: $(VersionPrefix)-$(Build.BuildId)
+
 variables:
   BuildConfiguration: 'Release'
+  PackageVersion: $(Build.BuildNumber)
+  VersionPrefix: 1.0.0-preview
 
 steps:
 - task: DotNetCoreCLI@2
@@ -16,6 +20,19 @@ steps:
   inputs:
     projects: src/Polyrific.Project.Common/Polyrific.Project.Common.csproj
     arguments: '--configuration $(BuildConfiguration)'
+
+- task: NuGetToolInstaller@0
+  displayName: 'Use NuGet 4.9.2'
+  inputs:
+    versionSpec: 4.9.2
+
+- task: NuGetCommand@2
+  displayName: 'NuGet pack'
+  inputs:
+    command: pack
+    packagesToPack: src/Polyrific.Project.Common/Polyrific.Project.Common.nuspec
+    versioningScheme: byEnvVar
+    versionEnvVar: PackageVersion
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
