@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Polyrific.Project.Common</id>
+    <version>1.0.0-preview</version>
+    <title>Polyrific Project Common Library</title>
+    <authors>frandi-polyrific</authors>
+    <owners>frandi-polyrific</owners>
+    <licenseUrl>https://github.com/Polyrific-Inc/PolyrificProjectLibs/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Polyrific-Inc/PolyrificProjectLibs</projectUrl>
+    <iconUrl>https://github.com/Polyrific-Inc/OpenCatapult/tree/master/images/polyrific.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A collection of common libraries</description>
+    <releaseNotes>Preview release</releaseNotes>
+    <copyright>Copyright (c) Polyrific, Inc 2019. All rights reserved</copyright>
+    <tags>polyrific project common library</tags>
+  </metadata>
+</package>
