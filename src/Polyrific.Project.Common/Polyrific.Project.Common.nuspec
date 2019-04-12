@@ -15,4 +15,8 @@
     <copyright>Copyright (c) Polyrific, Inc 2019. All rights reserved</copyright>
     <tags>polyrific project common library</tags>
   </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\*" target="lib\netstandard2.0"></file>
+    <file src="bin\Release\net461\*" target="lib\net461"></file>
+  </files>
 </package>

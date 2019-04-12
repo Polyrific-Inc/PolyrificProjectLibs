@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿// Copyright (c) Polyrific, Inc 2019. All rights reserved.
+
+using System.Collections.Generic;
 
 namespace Polyrific.Project.Common.Collections
 {

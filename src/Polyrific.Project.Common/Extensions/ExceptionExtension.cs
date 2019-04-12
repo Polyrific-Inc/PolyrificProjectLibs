@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Copyright (c) Polyrific, Inc 2019. All rights reserved.
+
+using System;
 using System.Collections.Generic;
 
 namespace Polyrific.Project.Common.Extensions

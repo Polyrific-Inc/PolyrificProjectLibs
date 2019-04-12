@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿// Copyright (c) Polyrific, Inc 2019. All rights reserved.
+
+using System.IO;
 using System.Threading.Tasks;
 
 namespace Polyrific.Project.Common.Helpers
