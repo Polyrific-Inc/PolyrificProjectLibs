@@ -1,0 +1,21 @@
+pool:
+  vmImage: 'vs2017-win2016'
+
+variables:
+  BuildConfiguration: 'Release'
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: restore
+    projects: src/Polyrific.Project.Common/Polyrific.Project.Common.csproj
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet build'
+  inputs:
+    projects: src/Polyrific.Project.Common/Polyrific.Project.Common.csproj
+    arguments: '--configuration $(BuildConfiguration)'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
