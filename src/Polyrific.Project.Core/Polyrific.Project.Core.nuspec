@@ -15,7 +15,7 @@
     <copyright>Copyright (c) Polyrific, Inc 2019. All rights reserved</copyright>
     <tags>polyrific project core library</tags>
     <dependencies>
-      <dependency id="Polyrific.Project.Common" version="1.0.0-preview-*"></dependency>
+      <dependency id="Polyrific.Project.Common" version="1.0.0-preview-17526"></dependency>
     </dependencies>
   </metadata>
   <files>
