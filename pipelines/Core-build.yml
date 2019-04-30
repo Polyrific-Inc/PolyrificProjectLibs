@@ -9,7 +9,7 @@ trigger:
     - master
   paths:
     include:
-    - src/Polyrific.Project.Common/
+    - src/Polyrific.Project.Core/
 
 variables:
   BuildConfiguration: 'Release'
@@ -21,12 +21,12 @@ steps:
   displayName: 'dotnet restore'
   inputs:
     command: restore
-    projects: src/Polyrific.Project.Common/Polyrific.Project.Common.csproj
+    projects: src/Polyrific.Project.Core/Polyrific.Project.Core.csproj
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
-    projects: src/Polyrific.Project.Common/Polyrific.Project.Common.csproj
+    projects: src/Polyrific.Project.Core/Polyrific.Project.Core.csproj
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: NuGetToolInstaller@0
@@ -38,7 +38,7 @@ steps:
   displayName: 'NuGet pack'
   inputs:
     command: pack
-    packagesToPack: src/Polyrific.Project.Common/Polyrific.Project.Common.nuspec
+    packagesToPack: src/Polyrific.Project.Core/Polyrific.Project.Core.nuspec
     versioningScheme: byEnvVar
     versionEnvVar: PackageVersion
 

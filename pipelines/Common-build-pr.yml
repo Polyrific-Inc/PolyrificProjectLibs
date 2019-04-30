@@ -3,7 +3,7 @@ pool:
 
 name: $(VersionPrefix)-$(Build.BuildId)
 
-trigger:
+pr:
   branches:
     include:
     - master
@@ -28,19 +28,3 @@ steps:
   inputs:
     projects: src/Polyrific.Project.Common/Polyrific.Project.Common.csproj
     arguments: '--configuration $(BuildConfiguration)'
-
-- task: NuGetToolInstaller@0
-  displayName: 'Use NuGet 4.9.2'
-  inputs:
-    versionSpec: 4.9.2
-
-- task: NuGetCommand@2
-  displayName: 'NuGet pack'
-  inputs:
-    command: pack
-    packagesToPack: src/Polyrific.Project.Common/Polyrific.Project.Common.nuspec
-    versioningScheme: byEnvVar
-    versionEnvVar: PackageVersion
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'

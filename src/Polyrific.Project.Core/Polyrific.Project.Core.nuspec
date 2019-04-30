@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Polyrific.Project.Core</id>
+    <version>1.0.0-preview</version>
+    <title>Polyrific Project Core Library</title>
+    <authors>frandi-polyrific</authors>
+    <owners>frandi-polyrific</owners>
+    <licenseUrl>https://github.com/Polyrific-Inc/PolyrificProjectLibs/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Polyrific-Inc/PolyrificProjectLibs</projectUrl>
+    <iconUrl>https://github.com/Polyrific-Inc/OpenCatapult/tree/master/images/polyrific.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A collection of project core libraries</description>
+    <releaseNotes>Preview release</releaseNotes>
+    <copyright>Copyright (c) Polyrific, Inc 2019. All rights reserved</copyright>
+    <tags>polyrific project core library</tags>
+    <dependencies>
+      <dependency id="Polyrific.Project.Common" version="1.0.0-preview-*"></dependency>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\*" target="lib\netstandard2.0"></file>
+    <file src="bin\Release\net461\*" target="lib\net461"></file>
+  </files>
+</package>

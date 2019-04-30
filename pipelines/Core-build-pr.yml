@@ -1,0 +1,30 @@
+pool:
+  vmImage: 'vs2017-win2016'
+
+name: $(VersionPrefix)-$(Build.BuildId)
+
+pr:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - src/Polyrific.Project.Core/
+
+variables:
+  BuildConfiguration: 'Release'
+  PackageVersion: $(Build.BuildNumber)
+  VersionPrefix: 1.0.0-preview
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: restore
+    projects: src/Polyrific.Project.Core/Polyrific.Project.Core.csproj
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet build'
+  inputs:
+    projects: src/Polyrific.Project.Core/Polyrific.Project.Core.csproj
+    arguments: '--configuration $(BuildConfiguration)'
